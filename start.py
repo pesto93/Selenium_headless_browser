@@ -16,8 +16,9 @@ class latestCrawler(object):
     def selenium(self):
         # Let's create some option to make Chromium go headless
         options = webdriver.ChromeOptions()
-        options.add_argument('headless')
-        options.add_argument('disable-gpu')
+        options.add_argument('--headless')
+        options.add_argument('--disable-gpu')
+        options.add_argument('--no-sandbox')
 
         # Launch the browser and make prefs
         browser = webdriver.Chrome(chrome_options=options)
